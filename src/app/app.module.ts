@@ -10,6 +10,7 @@ import { routes } from './app.routes';
 import { SearchService } from './services';
 import { LocalStorageService } from './services';
 import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { ArtistComponent } from './components/artist/artist.component';
 import { ArtistTrackListComponent } from './components/artist-track-list/artist-track-list.component';
 import { ArtistAlbumnListComponent } from './components/artist-albumn-list/artist-albumn-list.component';
@@ -20,6 +21,7 @@ import { ArtistAlbumnListComponent } from './components/artist-albumn-list/artis
     HomeComponent,
     SearchComponent,
     HeaderComponent,
+    FooterComponent,
     ArtistComponent,
     ArtistTrackListComponent,
     ArtistAlbumnListComponent

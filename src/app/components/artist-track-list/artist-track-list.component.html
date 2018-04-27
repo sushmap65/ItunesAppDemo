@@ -1,9 +1,10 @@
 <div class="list-group-item list-group-item-action"
      *ngFor="let track of tracks">
-    <h3>
-    <img src="{{track.artworkUrl30}}">
-    {{ track.trackName
- }} ---> <a href ="{{track.trackViewUrl}}"  target="_blank">{{ track.trackViewUrl }} </a>
- </h3>
+    <p class="artist-details">
+    <img src="{{track.artworkUrl30}}" class="track-img">
+    {{ track.trackName}} 
+  
+    <a href ="{{track.trackViewUrl}}"  target="_blank"><p class="artist-click-here">Please click this Link</p>{{ track.trackViewUrl }} </a>
+    </p>
     <br />
 </div>

@@ -1,0 +1,31 @@
+<div class="card large" style="background: #fafafa!important;">
+  <!--   <form class="form-inline"> -->
+    <div class="row search-row">
+      <div class="col l2 push-l2">
+           <i class="material-icons">queue_music</i>
+      </div>
+      <div class="col l6 push-l2">
+            <input type="search"
+           class="col l6 form-control"
+           placeholder="Enter search string"
+           #search>
+      </div>
+      <div class="col l3">
+          <button type="button"
+          class="btn btn-primary"
+          (click)="doSearch(search.value)">
+    Search
+  </button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col l4 push-l2">
+      <img class="home-background-img" src="../../assets/img/3.gif" style="width: 300px;height: 330px;">
+    </div>
+    <div class="col l4 push-l1">
+        <img class="home-background-img" src="../assets/img/5.gif" style="width: 300px;height: 330px;">
+      </div>
+        <div class="col l4">
+        <img class="home-background-img" src="../assets/img/4.gif" style="width: 300px;height: 330px;">
+      </div>
+  </div>

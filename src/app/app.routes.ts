@@ -9,6 +9,7 @@ export const routes: Routes = [
 	{ path: 'find', redirectTo: 'search'},
 	{ path: '', component: HomeComponent },
 /*	{ path: 'search/:term', component: SearchComponent },*/
+{ path: 'home', component: HomeComponent },	
 	{ path: 'search', component: SearchComponent },	
 	{ path: 'artist/:artistid', component: ArtistComponent,
 		children:[

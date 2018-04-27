@@ -1,31 +1,85 @@
+
 <form class="form-inline">
   <div class="form-group">
-    <input type="search"
+    <div class="row search-row">
+      <div class="col l2 push-l2">
+        <i class="material-icons">queue_music</i>
+      </div>
+      <div class="col l6 push-l1">
+        <input type="search"
+        class="col l6 form-control"
+        placeholder="Enter search string"
+        #search>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+  <div class="col l3 push-l8" style="margin-top: -6%;">
+  <button type="button"
+  class="btn btn-primary"
+  (click)="doSearch(search.value)">
+  Search
+</button>
+</div>
+</div>
+</form>
+<div class="text-center">
+  <p class="lead"
+  *ngIf="loading">Loading...</p>
+</div>
+<div class="list-group">
+  <a [routerLink] = "['/artist', track.artistId]"
+  class="list-group-item list-group-item-action"
+  *ngFor="let track of result">
+  <img src="{{track.thumbnail}}">
+  {{ track.name }} <span class="text-muted">by</span> {{ track.track }}
+  <br />
+</a>
+</div>
+  <div class="row">
+    <div class="col l4 push-l2">
+      <img class="home-background-img" src="../../assets/img/3.gif" style="width: 300px;height: 330px;">
+    </div>
+    <div class="col l4 push-l1">
+        <img class="home-background-img" src="../assets/img/5.gif" style="width: 300px;height: 330px;">
+      </div>
+        <div class="col l4">
+        <img class="home-background-img" src="../assets/img/4.gif" style="width: 300px;height: 330px;">
+      </div>
+    </div>
+
+<!-- 
+<div class="card large" style="background: #fafafa!important;">
+
+    <div class="row search-row">
+      <div class="col l2 push-l2">
+           <i class="material-icons">queue_music</i>
+      </div>
+      <div class="col l6 push-l2">
+            <input type="search"
            class="col l6 form-control"
            placeholder="Enter search string"
            #search>
-  </div>
-  <button type="button"
+      </div>
+      <div class="col l3">
+          <button type="button"
           class="btn btn-primary"
           (click)="doSearch(search.value)">
     Search
   </button>
-</form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col l4 push-l2">
+      <img class="home-background-img" src="../../assets/img/3.gif" style="width: 300px;height: 330px;">
+    </div>
+    <div class="col l4 push-l1">
+        <img class="home-background-img" src="../assets/img/5.gif" style="width: 300px;height: 330px;">
+      </div>
+        <div class="col l4">
+        <img class="home-background-img" src="../assets/img/4.gif" style="width: 300px;height: 330px;">
+      </div>
+    </div> -->
 
-<hr />
 
-<div class="text-center">
-  <p class="lead"
-     *ngIf="loading">Loading...</p>
-</div>
-<div class="list-group">
-  <a [routerLink] = "['/artist', track.artistId]"
-     class="list-group-item list-group-item-action"
-     *ngFor="let track of result">
-    <img src="{{track.thumbnail}}">
-    {{ track.name }} <span class="text-muted">by</span> {{ track.track }}
-    <br />
-  </a>
-</div>
-<!-- <app-artist *ngIf = 'result !== undefined'[TrackData] = 'result'></app-artist>
- -->
+

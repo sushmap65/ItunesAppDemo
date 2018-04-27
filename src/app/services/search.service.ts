@@ -19,7 +19,9 @@ export class SearchService {
 
 
 	public searchApi(term: string) {
+		console.log("api---------",term);
 		let apiURL = `${this.apiRoot}?term=${term}&media=music&limit=20`;
+		console.log("api url",apiURL);
 		return this.http.get(apiURL)
 			   .map((response) => {
 			   	console.log('response', response.json());
