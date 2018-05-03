@@ -14,6 +14,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ArtistComponent } from './components/artist/artist.component';
 import { ArtistTrackListComponent } from './components/artist-track-list/artist-track-list.component';
 import { ArtistAlbumnListComponent } from './components/artist-albumn-list/artist-albumn-list.component';
+import { MoviesComponent } from './components/movies/movies.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ArtistAlbumnListComponent } from './components/artist-albumn-list/artis
     FooterComponent,
     ArtistComponent,
     ArtistTrackListComponent,
-    ArtistAlbumnListComponent
+    ArtistAlbumnListComponent,
+    MoviesComponent
   ],
   imports: [
     BrowserModule,

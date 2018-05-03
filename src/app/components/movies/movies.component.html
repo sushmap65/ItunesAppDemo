@@ -1,0 +1,41 @@
+<div class="movie-header">Your movie list</div>
+<form class="form-inline">
+<div class="row">
+	<form class="col s12">
+		<div class="row">
+			<div class="input-field col s6 l6 push-l3">
+				<input placeholder="Search film name" type="text" #search>
+
+			</div>
+			<div class="col l4 push-l3" style="padding-top: 2%;">
+<button class="waves-effect waves-light btn" (click)="searchMovie(search.value)">Search</button></div>
+		</div>
+	</form>
+</div>
+</form>
+<div class="text-center">
+  <p class="lead"
+  *ngIf="loading">Loading...</p>
+</div>
+<div class="list-group" style="text-align: center;">
+  <a [routerLink] = "['/artist', track.artistId]"
+  class="list-group-item list-group-item-action"
+  *ngFor="let track of filmlist">
+  <img src="{{track.thumbnail}}">
+  {{ track.name }} <span class="text-muted">by</span> {{ track.track }}
+  <br />
+</a>
+</div>
+
+<div class="row">
+	<div class="col l4 push-l2">
+		<img class="home-background-img" src="../../assets/img/aamir.jpg" style="width: 300px;height: 330px;">
+	</div>
+	<div class="col l4 push-l1">
+		<img class="home-background-img" src="../assets/img/lal.jpg" style="width: 300px;height: 330px;">
+	</div>
+	<div class="col l4">
+		<img class="home-background-img" src="../assets/img/thala.jpg" style="width: 300px;height: 330px;">
+	</div>
+</div>
+
